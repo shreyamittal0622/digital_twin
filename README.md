@@ -137,7 +137,7 @@ $$\text{CI}_{95}=1.96\,\sqrt{\Sigma_{\theta\theta}}$$
 
 where Σ is the covariance matrix returned by the fit (*Cell 16*).
 
-![Four calibration experiments](results/figures/01_four_experiments_overview.png)
+![Four calibration experiments](Results/figures/01_four_experiments_overview.png)
 
 *Top-left: T1 inversion recovery. Top-right: Ramsey. Bottom-left: Hahn echo. Bottom-right: pulse-error amplification.*
 
@@ -204,7 +204,7 @@ $$r_i = y_i - f(x_i;\hat\theta)$$
 
 Residuals are data minus fit. Flat noise around zero means a good model; smooth structure means model mismatch.
 
-![T1 residuals](results/figures/02_residuals_T1.png)
+![T1 residuals](Results/figures/02_residuals_T1.png)
 
 *Fig. 2a: T1 residuals are ~10⁻¹⁶, i.e. floating-point rounding.*
 
@@ -212,11 +212,11 @@ Residuals are data minus fit. Flat noise around zero means a good model; smooth 
 
 *Fig. 2b: Ramsey residuals reach ~10⁻¹⁰ with a smooth shape, probably because the extra detuning parameter lets the fit trade off slightly against T2\*. Still negligible.*
 
-![Hahn echo residuals](results/figures/04_residuals_hahn_echo.png)
+![Hahn echo residuals](Results/figures/04_residuals_hahn_echo.png)
 
 *Fig. 2c: Hahn echo residuals are ~10⁻¹⁶ (rounding).*
 
-![Pulse error residuals](results/figures/05_residuals_amplitude_error.png)
+![Pulse error residuals](Results/figures/05_residuals_amplitude_error.png)
 
 *Fig. 2d: the pulse-error residuals are ~10⁻³ with clear structure. This is the one fit where the model is slightly wrong (the n versus n+1 mismatch above).*
 
@@ -226,7 +226,7 @@ $$\langle Z\rangle(\tau)=V\,\bigl(1-2e^{-\tau/T_1}\bigr)+b$$
 
 Adds a **visibility** V (contrast lost to imperfect state preparation and measurement, SPAM) and an **offset** b (baseline shift).
 
-![T1 with SPAM](results/figures/06_T1_fit_with_SPAM_model.png)
+![T1 with SPAM](Results/figures/06_T1_fit_with_SPAM_model.png)
 
 | Parameter | Fitted |
 |---|---|
@@ -303,7 +303,7 @@ For each of the 8 basis states, the median is the prediction and the 5th/95th pe
 
 These match hand calculations. In circuit 002 the excited qubit survives with probability e^(−100/50) = 0.1353, giving 0.8647 in |000⟩ and 0.1353 in |001⟩. In circuit 001, after H the qubit-0 excited population is ½ and relaxes to ½·e^(−1) = 0.1839 at τ = T1, and the qubit-1 over-rotation of 1° leaves it almost fully in |1⟩.
 
-![Blind prediction](results/figures/07_blind_prediction_circuit_001_90pct_intervals.png)
+![Blind prediction](Results/figures/07_blind_prediction_circuit_001_90pct_intervals.png)
 
 *Fig. 4: predicted probabilities for circuit 001. The error bars are invisible because the interval width is essentially zero (the fit covariance is ~10⁻³⁰ since the data is noise-free). The x-axis labels are also garbled; see Section 8.*
 
@@ -325,7 +325,7 @@ $$\Delta_\theta=\frac{\partial\,\mathrm{TVD}}{\partial\theta}\cdot\bigl(\hat\the
 
 First-order estimate of how much of the TVD error comes from the parameter error (estimate − truth).
 
-![TVD breakdown](results/figures/08_posthoc_TVD_error_breakdown.png)
+![TVD breakdown](Results/figures/08_posthoc_TVD_error_breakdown.png)
 
 | Parameter | Estimated | "True" used | Contribution Δ |
 |---|---|---|---|
