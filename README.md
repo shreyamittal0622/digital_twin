@@ -1,11 +1,5 @@
 # Density-Matrix Digital Twin for Noisy Quantum Circuits
 
-A 3-qubit density-matrix simulator that models gate errors, T1 relaxation, dephasing and readout error, then calibrates itself with synthetic experiments and propagates fit uncertainty into circuit predictions.
-
-This README explains **every equation used in `notebook/digital_twin.ipynb`**, shows the notebook's results and graphs next to the equation that produced them, and lists the problems found along the way.
-
-> **Important:** all data is synthetic. The simulator generates the traces and the same simulator family then fits them, so the results show *internal consistency*, not accuracy against real hardware.
-
 ---
 
 ## 1. Package contents
